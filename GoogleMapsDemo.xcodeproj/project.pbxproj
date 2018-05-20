@@ -112,6 +112,7 @@
 		7B34142720B0AEC300637466 /* GoogleMapsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7B34145820B2122A00637466 /* ViewControllers */,
 				7B34145320B1D7E900637466 /* Model */,
 				7B34145020B1D1AB00637466 /* Helper */,
 				7B34144F20B1D19900637466 /* Constant */,
@@ -120,10 +121,8 @@
 				7B34142F20B0AEC500637466 /* Assets.xcassets */,
 				7B34143420B0AEC500637466 /* Info.plist */,
 				7B34143120B0AEC500637466 /* LaunchScreen.storyboard */,
-				7B34144820B0C7DA00637466 /* LocationSearchViewController.swift */,
 				7B34142C20B0AEC300637466 /* Main.storyboard */,
 				7B34144A20B0CA0D00637466 /* SearchFooter.swift */,
-				7B34142A20B0AEC300637466 /* ViewController.swift */,
 			);
 			path = GoogleMapsDemo;
 			sourceTree = "<group>";
@@ -167,6 +166,15 @@
 				7B34145420B1D7F500637466 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7B34145820B2122A00637466 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B34144820B0C7DA00637466 /* LocationSearchViewController.swift */,
+				7B34142A20B0AEC300637466 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D6D8F26A22DD07653BA3C78F /* Frameworks */ = {
