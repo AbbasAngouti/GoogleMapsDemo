@@ -37,6 +37,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showMap" id="BIB-1y-fTy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -44,30 +47,19 @@
                                     <outlet property="delegate" destination="jmS-wK-9fq" id="Kr8-bc-ska"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myw-ra-IKt" customClass="SearchFooter" customModule="CandySearch" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="wUG-G4-4sI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mfQ-yX-3NC" firstAttribute="leading" secondItem="Qe6-lc-dLN" secondAttribute="leading" id="3hv-c9-yC6"/>
                             <constraint firstAttribute="bottom" secondItem="mfQ-yX-3NC" secondAttribute="bottom" id="76J-Zk-eRb"/>
                             <constraint firstItem="mfQ-yX-3NC" firstAttribute="top" secondItem="pf4-ym-Yke" secondAttribute="top" id="8si-kC-lLU"/>
-                            <constraint firstAttribute="bottom" secondItem="Myw-ra-IKt" secondAttribute="bottom" id="ThR-qk-U4T"/>
                             <constraint firstItem="mfQ-yX-3NC" firstAttribute="trailing" secondItem="Qe6-lc-dLN" secondAttribute="trailing" id="VEc-Bx-lMB"/>
-                            <constraint firstItem="Myw-ra-IKt" firstAttribute="leading" secondItem="pf4-ym-Yke" secondAttribute="leading" id="mYa-xl-MlR"/>
-                            <constraint firstAttribute="trailing" secondItem="Myw-ra-IKt" secondAttribute="trailing" id="yYr-w4-N4K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qe6-lc-dLN"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nog-4A-gUc"/>
                     <connections>
                         <outlet property="searchBar" destination="UE0-VD-BPo" id="t93-5U-6ZD"/>
-                        <outlet property="searchFooter" destination="Myw-ra-IKt" id="vVU-OC-36o"/>
                         <outlet property="tableView" destination="mfQ-yX-3NC" id="f3P-Nu-P3S"/>
                     </connections>
                 </viewController>
@@ -75,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="1720.8" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleMapsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="GoogleMapsDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,25 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3127.1999999999998" y="293.70314842578711"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7I8-HQ-LeF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ltf-dR-iKj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sbp-9s-lMG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Z8-ap-GGa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-FJ-pSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="791.15442278860576"/>
+            <point key="canvasLocation" x="2610" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="075-g7-Whe">

@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7B34142920B0AEC300637466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34142820B0AEC300637466 /* AppDelegate.swift */; };
-		7B34142B20B0AEC300637466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34142A20B0AEC300637466 /* ViewController.swift */; };
+		7B34142B20B0AEC300637466 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34142A20B0AEC300637466 /* MapViewController.swift */; };
 		7B34142E20B0AEC300637466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34142C20B0AEC300637466 /* Main.storyboard */; };
 		7B34143020B0AEC500637466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B34142F20B0AEC500637466 /* Assets.xcassets */; };
 		7B34143320B0AEC500637466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B34143120B0AEC500637466 /* LaunchScreen.storyboard */; };
 		7B34143E20B0AEC500637466 /* GoogleMapsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34143D20B0AEC500637466 /* GoogleMapsDemoTests.swift */; };
 		7B34144920B0C7DA00637466 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34144820B0C7DA00637466 /* LocationSearchViewController.swift */; };
-		7B34144B20B0CA0D00637466 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34144A20B0CA0D00637466 /* SearchFooter.swift */; };
 		7B34144E20B1D19300637466 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34144D20B1D19200637466 /* ApiClient.swift */; };
 		7B34145220B1D1CC00637466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145120B1D1CC00637466 /* Constants.swift */; };
 		7B34145520B1D7F500637466 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145420B1D7F500637466 /* Model.swift */; };
@@ -40,7 +39,7 @@
 		7048531A4BD0E4B9126BE4E3 /* Pods-GoogleMapsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsDemo/Pods-GoogleMapsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		7B34142520B0AEC300637466 /* GoogleMapsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34142820B0AEC300637466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B34142A20B0AEC300637466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B34142A20B0AEC300637466 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7B34142D20B0AEC300637466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B34142F20B0AEC500637466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B34143220B0AEC500637466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 		7B34143D20B0AEC500637466 /* GoogleMapsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsDemoTests.swift; sourceTree = "<group>"; };
 		7B34143F20B0AEC500637466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B34144820B0C7DA00637466 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
-		7B34144A20B0CA0D00637466 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		7B34144D20B1D19200637466 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7B34145120B1D1CC00637466 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B34145420B1D7F500637466 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				7B34143420B0AEC500637466 /* Info.plist */,
 				7B34143120B0AEC500637466 /* LaunchScreen.storyboard */,
 				7B34142C20B0AEC300637466 /* Main.storyboard */,
-				7B34144A20B0CA0D00637466 /* SearchFooter.swift */,
 			);
 			path = GoogleMapsDemo;
 			sourceTree = "<group>";
@@ -172,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7B34144820B0C7DA00637466 /* LocationSearchViewController.swift */,
-				7B34142A20B0AEC300637466 /* ViewController.swift */,
+				7B34142A20B0AEC300637466 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -350,10 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B34145520B1D7F500637466 /* Model.swift in Sources */,
-				7B34142B20B0AEC300637466 /* ViewController.swift in Sources */,
+				7B34142B20B0AEC300637466 /* MapViewController.swift in Sources */,
 				7B34144920B0C7DA00637466 /* LocationSearchViewController.swift in Sources */,
 				7B34145720B1D8D700637466 /* Helpers.swift in Sources */,
-				7B34144B20B0CA0D00637466 /* SearchFooter.swift in Sources */,
 				7B34142920B0AEC300637466 /* AppDelegate.swift in Sources */,
 				7B34144E20B1D19300637466 /* ApiClient.swift in Sources */,
 				7B34145220B1D1CC00637466 /* Constants.swift in Sources */,

@@ -27,7 +27,7 @@ struct Geometry: Codable {
     }
 }
 
-struct GeoCodeResult: Codable {
+struct GeoCodeLocation: Codable {
     let formattedAddress: String // formatted_address
     let geometry: Geometry
     
@@ -40,7 +40,7 @@ struct GeoCodeResult: Codable {
 
 struct GeoCodeApiResponse: Codable {
     let status: String
-    let results: [GeoCodeResult]
+    let results: [GeoCodeLocation]
 }
 
 
@@ -64,7 +64,7 @@ enum ResultType {
     case error(e: DataFetchError)
 }
 
-extension GeoCodeResult: APIResult {}
+extension GeoCodeLocation: APIResult {}
 
 extension Array: APIResult where Element: APIResult {}
 

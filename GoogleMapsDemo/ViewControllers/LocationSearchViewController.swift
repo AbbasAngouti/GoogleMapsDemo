@@ -12,10 +12,9 @@ class LocationSearchViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - Properties
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var searchFooter: SearchFooter!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var locations = [GeoCodeResult]() {
+    var locations = [GeoCodeLocation]() {
         didSet {
             DispatchQueue.main.async { [unowned self] in
                 self.tableView.reloadData()
@@ -100,13 +99,24 @@ class LocationSearchViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showMap" {
+            guard let mvc = segue.destination as? MapViewController else {
+                return
+            }
+            
+            guard let index = tableView.indexPathForSelectedRow else {
+                return
+            }
+            if !(index == IndexPath(row: 0, section: 0) && locations.count > 1) { // or number of sections > 1
+                mvc.selectedLocatoinIndex = index.row
+            }
+            mvc.locations = locations
         }
     }
 }
 
 
-extension LocationSearchViewController {
+extension LocationSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true) // dismiss keyboard
         
@@ -119,7 +129,7 @@ extension LocationSearchViewController {
                 self.handleError(error: error)
                 break
             case .success(let gcr):
-                if let gcr = gcr as? [GeoCodeResult] {
+                if let gcr = gcr as? [GeoCodeLocation] {
                     self.locations = gcr
                 }
                 break
@@ -127,5 +137,3 @@ extension LocationSearchViewController {
         }
     }
 }
-
-extension LocationSearchViewController: UISearchBarDelegate { }
