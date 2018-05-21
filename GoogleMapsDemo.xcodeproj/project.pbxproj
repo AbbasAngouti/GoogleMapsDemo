@@ -18,6 +18,8 @@
 		7B34145220B1D1CC00637466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145120B1D1CC00637466 /* Constants.swift */; };
 		7B34145520B1D7F500637466 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145420B1D7F500637466 /* Model.swift */; };
 		7B34145720B1D8D700637466 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145620B1D8D700637466 /* Helpers.swift */; };
+		7B34145A20B26C8400637466 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145920B26C8400637466 /* CoreDataStack.swift */; };
+		7B34145D20B26D2500637466 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B34145B20B26D2500637466 /* DataModel.xcdatamodeld */; };
 		B157E111833257FE4E9314EE /* Pods_GoogleMapsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EADF6751844942F9D90576 /* Pods_GoogleMapsDemo.framework */; };
 		FBCDAF09767D473D37AF536B /* Pods_GoogleMapsDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3EA5C014D57C4E3414EB53 /* Pods_GoogleMapsDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		7B34145120B1D1CC00637466 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B34145420B1D7F500637466 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7B34145620B1D8D700637466 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		7B34145920B26C8400637466 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7B34145C20B26D2500637466 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		87EBE3AC54BB7A81B5015109 /* Pods-GoogleMapsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsDemoTests/Pods-GoogleMapsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3EA5C014D57C4E3414EB53 /* Pods_GoogleMapsDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				7B34145420B1D7F500637466 /* Model.swift */,
+				7B34145920B26C8400637466 /* CoreDataStack.swift */,
+				7B34145B20B26D2500637466 /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,7 +358,9 @@
 				7B34145720B1D8D700637466 /* Helpers.swift in Sources */,
 				7B34142920B0AEC300637466 /* AppDelegate.swift in Sources */,
 				7B34144E20B1D19300637466 /* ApiClient.swift in Sources */,
+				7B34145D20B26D2500637466 /* DataModel.xcdatamodeld in Sources */,
 				7B34145220B1D1CC00637466 /* Constants.swift in Sources */,
+				7B34145A20B26C8400637466 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +631,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7B34145B20B26D2500637466 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7B34145C20B26D2500637466 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 7B34145C20B26D2500637466 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B34141D20B0AEC300637466 /* Project object */;
 }
