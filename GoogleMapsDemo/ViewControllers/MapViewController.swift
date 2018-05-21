@@ -44,12 +44,18 @@ class MapViewController: UIViewController {
             marker.snippet = "(\(location.geometry.location.latitude) \(location.geometry.location.longitude))"
             marker.map = mapView
             if zoomOnSingeLocation {
-                mapView?.camera = GMSCameraPosition.camera(withLatitude: locations[selectedLocatoinIndex].geometry.location.latitude, longitude: locations[selectedLocatoinIndex].geometry.location.longitude, zoom: zoom)
                 if i == selectedLocatoinIndex {
                     mapView?.selectedMarker = marker
+                    mapView?.camera = GMSCameraPosition.camera(withLatitude: locations[selectedLocatoinIndex].geometry.location.latitude, longitude: locations[selectedLocatoinIndex].geometry.location.longitude, zoom: zoom)
                 }
             }
+            if zoomOnSingeLocation {
+                navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.saveLocation))
+            }
         }
+    }
+    
+    @objc func saveLocation() {
         
     }
 }
